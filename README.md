@@ -1,0 +1,2 @@
+# algoritimos
+exercicio de aula
