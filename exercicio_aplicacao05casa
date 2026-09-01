@@ -1,0 +1,42 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float largura, comprimento, valor_caixa;
+    float area_total, custo_total;
+    int quantidade_caixas;
+    
+    // entradas do usuario
+    printf("qual e a largura da area (em metros)? ");
+    scanf("%f", &comprimento);
+    
+    printf("qual e o comprimento da area em metros? ");
+    scanf("%f", &comprimento);
+    
+    printf("qual e o valor de cada caixa? ");
+    scanf("%f", &valor_caixa);
+    
+    // cauculos
+    area_total = largura*comprimento;
+    
+    // cada caixa cobre 2.5 m². ceil() arredonda para o proximo inteiro.
+    quantidade_caixas = ceil(area_total / 2.5);
+    
+    custo_total = quantidade_caixas*valor_caixa;
+    
+    // exibiçao dos resultados com duas casas decimais
+    printf("\narea total a ser revestida: %.2f m²\n", area_total);
+    printf("quantidade de caixas necessarias: %d\n", quantidade_caixas);
+    printf("custo total da compra: r$ %.2f\n", custo_total);
+    
+    return 0; 
+}
